@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/bcgov/bcparks-theme#readme",
   "dependencies": {
-    "bootstrap": "^5.1.2"
+    "bootstrap": "^5.1.2",
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.8",

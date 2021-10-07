@@ -1,0 +1,47 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "Government of British Columbia Parks Bootstrap v5 theme",
+  "style": "dist/css/bootstrap-theme.min.css",
+  "main": "dist/js/bootstrap-theme.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch src/styles -o css",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcgov/bcparks-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcgov/bcparks-theme/issues"
+  },
+  "homepage": "https://github.com/bcgov/bcparks-theme#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "bootstrap": "^5.1.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.3.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.4.1",
+    "postcss": "^8.3.9",
+    "postcss-loader": "^6.1.1",
+    "prettier": "^2.4.1",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.9.0"
+  }
+}

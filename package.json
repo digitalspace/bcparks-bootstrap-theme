@@ -1,15 +1,18 @@
 {
-  "name": "my-webpack-project",
+  "name": "bcgov-bootstrap-theme",
   "version": "1.0.0",
   "description": "Government of British Columbia Parks Bootstrap v5 theme",
   "style": "dist/css/bootstrap-theme.min.css",
   "main": "dist/js/bootstrap-theme.min.js",
   "files": [
-    "dist"
+    "css",
+    "fonts",
+    "images",
+    "scss"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch src/styles -o src/css",
+    "scss": "node-sass --watch scss -o css",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
@@ -19,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/bcgov/bcparks-theme.git"
   },
-  "author": "",
+  "author": "Digitalspace Consulting Inc.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bcgov/bcparks-theme/issues"

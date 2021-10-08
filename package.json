@@ -1,7 +1,7 @@
 {
-  "name": "bcgov-bootstrap-theme",
+  "name": "@digitalspace/bcgov-bootstrap",
   "version": "1.0.0",
-  "description": "Government of British Columbia Parks Bootstrap v5 theme",
+  "description": "Government of British Columbia Bootstrap v5 theme",
   "style": "dist/css/bootstrap-theme.min.css",
   "main": "dist/js/bootstrap-theme.min.js",
   "files": [

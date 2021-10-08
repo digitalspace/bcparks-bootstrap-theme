@@ -54,14 +54,6 @@ module.exports = {
       {
         patterns: [
           {
-            from: 'README.md',
-            to: './'
-          },
-          {
-            from: 'package.json',
-            to: './'
-          },
-          {
             from: 'images',
             to: 'images'
           },

@@ -1,14 +1,11 @@
 {
   "name": "@digitalspace/bcgov-bootstrap",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Government of British Columbia Bootstrap v5 theme",
   "style": "dist/css/bootstrap-theme.min.css",
   "main": "dist/js/bootstrap-theme.min.js",
   "files": [
-    "css",
-    "fonts",
-    "images",
-    "scss"
+    "dist/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

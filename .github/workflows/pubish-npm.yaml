@@ -8,6 +8,7 @@ on:
 
 jobs:
   package:
+    name: "Create Package"
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2

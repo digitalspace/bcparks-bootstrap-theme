@@ -31,11 +31,12 @@ jobs:
             path: "*.tgz"
 
   publish:
+    if: github.ref == 'refs/heads/master'
     name: "Publish to GitHub Packages"
     needs: [package]
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
-    - name: Upload
+    - name: Get package
       uses: actions/download-artifact@v2
       with:
         name: package
@@ -48,3 +49,4 @@ jobs:
     - run: npm publish $(ls *.tgz)
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+ 

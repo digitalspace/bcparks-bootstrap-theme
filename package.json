@@ -17,14 +17,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bcgov/bcparks-theme.git"
+    "url": "git+https://github.com/digitalspace/bcparks-bootstrap-theme.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/digitalspace"
   },
   "author": "Digitalspace Consulting Inc.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bcgov/bcparks-theme/issues"
+    "url": "https://github.com/digitalspace/bcparks-bootstrap-theme/issues"
   },
-  "homepage": "https://github.com/bcgov/bcparks-theme#readme",
+  "homepage": "https://github.com/digitalspace/bcparks-bootstrap-theme#readme",
   "dependencies": {
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.1.2",

@@ -29,7 +29,7 @@ jobs:
           cache: 'npm'
       - run: npm ci --ignore-scripts
       - run: npm run build
-      - run: npm version --newversion ${{ steps.release.outputs.version }} --tag ${{ steps.release.outputs.tag }}
+      - run: npm version --newversion --allow-same-version ${{ steps.release.outputs.version }} --tag ${{ steps.release.outputs.tag }}
       - run: npm pack
       - name: Upload
         uses: actions/upload-artifact@v2

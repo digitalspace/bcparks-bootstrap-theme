@@ -8,9 +8,7 @@ jobs:
   package:
     name: "Create Package"
     runs-on: ubuntu-20.04
-    permissions: 
-      contents: read
-      packages: write 
+
     strategy:
       matrix:
         node-version: [14.x]
@@ -25,7 +23,7 @@ jobs:
 
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '14.x'
           cache: 'npm'
       - run: npm ci --ignore-scripts
       - run: npm run build
@@ -43,14 +41,21 @@ jobs:
     name: "Publish to GitHub Packages and NPM"
     needs: [package]
     runs-on: ubuntu-20.04
+    permissions: 
+      contents: read
+      packages: write 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14.x'
+        cache: 'npm'
+        registry-url: 'https://registry.npmjs.org'
     - name: Get package
       uses: actions/download-artifact@v2
       with:
         name: package
-    - run: npm publish --access public
+    - run: npm publish --access public $(ls *.tgz)
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     - uses: actions/setup-node@v2
@@ -58,6 +63,6 @@ jobs:
         registry-url: 'https://npm.pkg.github.com'
         # Defaults to the user or organization that owns the workflow file
         scope: '@digitalspace'
-    - run: npm publish
+    - run: npm publish $(ls *.tgz)
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

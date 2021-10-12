@@ -58,11 +58,13 @@ jobs:
     - run: npm publish --access public $(ls *.tgz)
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - run: rm .npmrc
     - uses: actions/setup-node@v2
       with:
-        registry-url: 'https://npm.pkg.github.com'
-        # Defaults to the user or organization that owns the workflow file
-        scope: '@digitalspace'
+        node-version: 14.x
+        registry-url: https://npm.pkg.github.com/
+        scope: "@digitalspace"
+    - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
     - run: npm publish $(ls *.tgz)
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

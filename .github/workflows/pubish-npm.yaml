@@ -15,14 +15,21 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+      - name: Validate and extract release information
+        id: release
+        uses: manovotny/github-releases-for-automated-package-publishing-action@v1.0.0
+
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
           cache: 'npm'
       - run: npm ci --ignore-scripts
       - run: npm run build
-      - run: npm version prerelease --preid=ci-$GITHUB_RUN_ID
+      - run: npm version --newversion ${{ steps.release.outputs.version }} --tag ${{ steps.release.outputs.tag }}
       - run: npm pack
       - name: Upload
         uses: actions/upload-artifact@v2

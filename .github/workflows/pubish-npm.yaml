@@ -10,14 +10,17 @@ jobs:
   package:
     name: "Create Package"
     runs-on: ubuntu-20.04
+    environment: dev
+    strategy:
+      matrix:
+        node-version: [14.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: 14.x
-
-      - run: npm i
+          node-version: '14'
+          cache: 'npm'
+      - run: npm ci --ignore-scripts
       - run: npm run build
       - run: npm version prerelease --preid=ci-$GITHUB_RUN_ID --no-git-tag-version
       - run: npm pack

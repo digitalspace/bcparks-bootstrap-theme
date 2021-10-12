@@ -19,9 +19,6 @@
     "type": "git",
     "url": "git+https://github.com/digitalspace/bcparks-bootstrap-theme.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/digitalspace"
-  },
   "author": "Digitalspace Consulting Inc.",
   "license": "ISC",
   "bugs": {

@@ -1,16 +1,16 @@
 name: Publish npm
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  release:
+    types: [created]
 
 jobs:
   package:
     name: "Create Package"
     runs-on: ubuntu-20.04
-    environment: dev
+    permissions: 
+      contents: read
+      packages: write 
     strategy:
       matrix:
         node-version: [14.x]
@@ -40,13 +40,14 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: package
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-        registry-url: https://npm.pkg.github.com/
-        scope: "@digitalspace"
-    - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
-    - run: npm publish $(ls *.tgz)
+    - run: npm publish --access public
       env:
-        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
- 
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - uses: actions/setup -node@v2
+      with:
+        registry-url: 'https://npm.pkg.github.com'
+        # Defaults to the user or organization that owns the workflow file
+        scope: '@digitalspace'
+    - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

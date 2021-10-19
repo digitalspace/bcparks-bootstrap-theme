@@ -1,6 +1,6 @@
 {
   "name": "@digitalspace/bcparks-bootstrap-theme",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Government of British Columbia Bootstrap v5 theme",
   "style": "dist/css/bootstrap-theme.min.css",
   "main": "dist/js/bootstrap-theme.min.js",
@@ -9,11 +9,11 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o css",
+    "scss": "sass --watch scss/bootstrap-theme.scss:css/bootstrap-theme.min.css --style compressed --no-source-map",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch"
+    "watch": "webpack --mode=development --watch"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
     "postcss-loader": "~3.0.0",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
     "webpack": "^5.57.1",
     "webpack-cli": "^4.9.0"
   }

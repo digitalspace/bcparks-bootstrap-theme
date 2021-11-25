@@ -35,7 +35,7 @@ $bcgold: #fcba19;
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Add our font as default
-$bcgov-font-path: "/fonts" !default;
+$bcgov-font-path: "../fonts" !default;
 $font-family-sans-serif: BCSans, "Noto Sans", Verdana, Arial, sans serif !default;
 $font-family-base: $font-family-sans-serif !default;
 $line-height-base: 1.6 !default;

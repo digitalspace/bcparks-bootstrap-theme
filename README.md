@@ -43,7 +43,7 @@ After your tools are in place, you should clone and install some packages:
 ```bash
 git clone git@github.com:digitalspace/bcparks-bootstrap-theme.git
 cd bcparks-bootstrap-theme
-npm install
+yarn
 ```
 
 ### Building Dist
@@ -51,7 +51,7 @@ npm install
 This project has been created using webpack-cli. To build the styles, Javascript and other assets, use:
 
 ```bash
-npm run build
+yarn build
 ```
 
 This will create a directory named dist. Webpack will generate minified js and css code as well as bring over all assets and sass code.
@@ -61,5 +61,5 @@ This will create a directory named dist. Webpack will generate minified js and c
 To package up dist for deployment you can use the following command at the root level of the project:
 
 ```bash
-npm pack
+yarn pack
 ``` 

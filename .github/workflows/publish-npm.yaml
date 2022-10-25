@@ -55,7 +55,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: package
-    - run: npm publish --access public $(ls *.tgz) . --dry-run
+    - run: npm publish --access public $(ls *.tgz) .
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     - uses: actions/setup-node@v2

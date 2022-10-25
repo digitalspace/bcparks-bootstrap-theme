@@ -24,13 +24,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+          cache: 'npm'
+      - run: npm ci --ignore-scripts
+      - run: npm run build
       - run: git config --global user.email ${{ secrets.EMAIL }}
       - run: git config --global user.name ${{ secrets.USERNAME }}
-      - run: yarn version --newversion --allow-same-version ${{ steps.release.outputs.version }} --tag ${{ steps.release.outputs.tag }}
-      - run: yarn pack
+      - run: npm version --newversion --allow-same-version ${{ steps.release.outputs.version }} --tag ${{ steps.release.outputs.tag }}
+      - run: npm pack
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
@@ -49,13 +49,13 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '14.x'
-        cache: 'yarn'
+        cache: 'npm'
         registry-url: 'https://registry.npmjs.org'
     - name: Get package
       uses: actions/download-artifact@v2
       with:
         name: package
-    - run: yarn publish --access public $(ls *.tgz)
+    - run: npm publish --access public $(ls *.tgz)
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     - uses: actions/setup-node@v2
@@ -64,6 +64,6 @@ jobs:
         registry-url: https://npm.pkg.github.com/
         scope: "@digitalspace"
     - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
-    - run: yarn publish $(ls *.tgz)
+    - run: npm publish $(ls *.tgz)
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

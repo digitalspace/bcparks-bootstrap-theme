@@ -13,7 +13,8 @@
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --mode=development --watch"
+    "watch": "webpack --mode=development --watch",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,12 +32,16 @@
     "jquery": "^3.6.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
+    "@types/node": "18",
     "autoprefixer": "^9.8.8",
     "bootstrap": "^5.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.3.0",
     "file-loader": "^6.2.0",
+    "husky": "^8.0.0",
     "mini-css-extract-plugin": "^2.4.1",
     "node-sass": "^7.0.3",
     "postcss": "^8.3.9",

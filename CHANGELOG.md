@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.0...v1.2.1) (2023-01-10)
+
+
+### Bug Fixes
+
+* **workflows:** adding npm plugin ([a15f599](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/a15f599c3901663adfba21894a366af6277d6e2d))
+
 # [1.2.0](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.1.0...v1.2.0) (2023-01-10)
 
 

@@ -2,6 +2,7 @@ module.exports = {
   branches: ["master"],
   plugins: [
     "@semantic-release/commit-analyzer",
+    "@semantic-release/git",
     "@semantic-release/changelog",
     "@semantic-release/github",
     // "@semantic-release/release-notes-generator",

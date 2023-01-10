@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.1...v1.2.2) (2023-01-10)
+
+
+### Bug Fixes
+
+* **workflowS:** removing github from plugins ([921807e](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/921807e690aee44d4c70121df100b849c17e63eb))
+
 ## [1.2.1](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.0...v1.2.1) (2023-01-10)
 
 

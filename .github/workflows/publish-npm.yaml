@@ -1,69 +1,74 @@
-# name: Publish NPM
+name: Publishing NPM
 
-# on:
-#   release:
-#     types: [created]
+run-name: Publishing ${{ github.event.inputs.releaseTag }} to prod
 
-# jobs:
-#   package:
-#     name: "Create Package"
-#     runs-on: ubuntu-20.04
+on:
+  workflow_dispatch:
+    inputs:
+      releaseTag:
+        description: 'Tag of version to be published to NPM'
+        required: true
 
-#     strategy:
-#       matrix:
-#         node-version: [16.x]
-#     steps:
-#       - name: Checkout repo
-#         uses: actions/checkout@v2
-#         with:
-#           ref: ${{ github.event.release.target_commitish }}
-#       - name: Validate and extract release information
-#         id: release
-#         uses: manovotny/github-releases-for-automated-package-publishing-action@v1.0.0
+jobs:
+  package:
+    name: "Create Package"
+    runs-on: ubuntu-20.04
 
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: "16.x"
-#           cache: "yarn"
-#       - run: yarn install --frozen-lockfile
-#       - run: yarn build
-#       - run: git config --global user.email ${{ secrets.EMAIL }}
-#       - run: git config --global user.name ${{ secrets.USERNAME }}
-#       - run: yarn version --newversion --allow-same-version ${{ steps.release.outputs.version }} --tag ${{ steps.release.outputs.tag }}
-#       - run: yarn pack
-#       - name: Upload
-#         uses: actions/upload-artifact@v2
-#         with:
-#           name: package
-#           path: "*.tgz"
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+      - name: Validate and extract release information
+        id: release
+        uses: manovotny/github-releases-for-automated-package-publishing-action@v1.0.0
 
-#   publish:
-#     name: "Publish to GitHub Packages and NPM"
-#     needs: [package]
-#     runs-on: ubuntu-20.04
-#     permissions:
-#       contents: read
-#       packages: write
-#     steps:
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: "16.x"
-#           cache: "yarn"
-#           registry-url: "https://registry.npmjs.org"
-#       - name: Get package
-#         uses: actions/download-artifact@v3
-#         with:
-#           name: package
-#       - run: yarn publish --access public
-#         env:
-#           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: "16.x"
-#           registry-url: https://npm.pkg.github.com/
-#           scope: "@digitalspace"
-#       - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
-#       - run: yarn publish $(ls *.tgz)
-#         env:
-#           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: git config --global user.email ${{ secrets.EMAIL }}
+      - run: git config --global user.name ${{ secrets.USERNAME }}
+      - run: yarn version --newversion --allow-same-version ${{ steps.release.outputs.version }} --tag ${{ steps.release.outputs.tag }}
+      - run: yarn pack
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: package
+          path: "*.tgz"
+
+  publish:
+    name: "Publish to GitHub Packages and NPM"
+    needs: [package]
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "yarn"
+          registry-url: "https://registry.npmjs.org"
+      - name: Get package
+        uses: actions/download-artifact@v3
+        with:
+          name: package
+      - run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          registry-url: https://npm.pkg.github.com/
+          scope: "@digitalspace"
+      - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
+      - run: yarn publish $(ls *.tgz)
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

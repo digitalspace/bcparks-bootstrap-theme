@@ -68,11 +68,11 @@
 #         env:
 #           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-name: Release
+name: Bump Version
 
 on:
   push:
-    branches: [master, beta]
+    branches: [master]
 
 jobs:
   release:

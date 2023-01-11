@@ -1,3 +1,15 @@
+## [1.2.3](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.2...v1.2.3) (2023-01-11)
+
+
+### Bug Fixes
+
+* **workflows:** adding build steps to on push workflow ([5317a98](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/5317a98860cd999d5f949f771f661c8cedea4a6c))
+* **workflows:** fixing indentation ([3fc781a](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/3fc781a4233b652f5038f67e1a6523f889f2ab49))
+* **workflows:** fixing name in yaml ([acc1692](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/acc169270aefbcf3bb2e7d09dffe434dd6f568f0))
+* **workflows:** indentation ([dd7aff0](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/dd7aff08dc0343e28f6d7bbd55104c193dc42dd7))
+* **workflows:** removing check for existing dist ([4225267](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/4225267c9864e1747dd6c90e0536762148ec7a8f))
+* **workflows:** updating release config ([84dd414](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/84dd41443dd8ff544d61a5c0130c1a38fb305eb0))
+
 ## [1.2.2](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.1...v1.2.2) (2023-01-10)
 
 

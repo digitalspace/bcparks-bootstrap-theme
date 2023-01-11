@@ -1,6 +1,6 @@
 {
   "name": "@digitalspace/bcparks-bootstrap-theme",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Government of British Columbia Bootstrap v5 theme",
   "style": "dist/css/bootstrap-theme.min.css",
   "main": "dist/js/bootstrap-theme.min.js",
@@ -34,6 +34,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.0",
     "@commitlint/config-conventional": "^17.4.0",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "18",
     "autoprefixer": "^9.8.8",
     "bootstrap": "^5.1.2",

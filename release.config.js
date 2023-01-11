@@ -1,5 +1,5 @@
 module.exports = {
-  branches: [{name: "master", prerelease: true}],
+  branches: ["master"],
   plugins: [
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
@@ -11,7 +11,6 @@ module.exports = {
       },
     ],
     "@semantic-release/git",
-    "@semantic-release/github",
     // "@semantic-release/release-notes-generator",
     // [
     //   "@semantic-release/changelog",

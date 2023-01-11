@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build and archive
+    name: "Build and archive"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -41,7 +41,7 @@ jobs:
         path: dist/
 
   upload-artifact:
-    name: Upload Artifact
+    name: "Upload Artifact"
     needs: [build]
     runs-on: ubuntu-latest
     strategy:
@@ -70,7 +70,7 @@ jobs:
           path: "*.tgz"
 
   semantic-release:
-    name: Bump version and push tag
+    name: "Bump version and push tag"
     needs: [build]
     runs-on: ubuntu-latest
     strategy:

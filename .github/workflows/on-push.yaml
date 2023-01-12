@@ -22,7 +22,6 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-            - name: Install dependencies
         run: yarn install --silent --frozen-lockfile
       - name: Build
         run: yarn build
@@ -49,7 +48,6 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-            - name: Install dependencies
       - name: Get dist
         uses: actions/download-artifact@v3
         with:
@@ -82,7 +80,6 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-            - name: Install dependencies
       - name: Install dependencies
         run: yarn install --silent --frozen-lockfile
       - name: Get dist

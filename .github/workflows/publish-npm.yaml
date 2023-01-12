@@ -28,8 +28,8 @@ jobs:
               await github.rest.repos.createRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                tag_name: RELEASE_TAG,
-                name: RELEASE_TAG,
+                tag_name: $RELEASE_TAG,
+                name: $RELEASE_TAG,
                 draft: false,
                 prerelease: false,
                 generate_release_notes: true,

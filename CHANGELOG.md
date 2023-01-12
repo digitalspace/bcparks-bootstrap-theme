@@ -1,3 +1,10 @@
+## [1.2.17](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.16...v1.2.17) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** typo ([f1dc57e](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/f1dc57e4c6e9303ac5fa344053f1cb5e1bbcfa1e))
+
 ## [1.2.16](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.15...v1.2.16) (2023-01-12)
 
 

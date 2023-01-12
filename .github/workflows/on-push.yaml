@@ -25,7 +25,7 @@ jobs:
         run: yarn build
       - uses: actions/upload-artifact@v3
         with:
-          name: dist
+          name: ${{ github.sha }}-dist
           path: dist/
 
   upload-artifact:
@@ -46,15 +46,15 @@ jobs:
       - name: Get dist
         uses: actions/download-artifact@v3
         with:
-          name: dist
+          name: ${{ github.sha }}-dist
       - run: git config --global user.email ${{ secrets.EMAIL }}
       - run: git config --global user.name ${{ secrets.USERNAME }}
       - run: yarn version --newversion --allow-same-version ${{ steps.release.outputs.version }} --tag ${{ steps.release.outputs.tag }}
       - run: yarn pack
-      - name: Upload
+      - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: package
+          name: ${{ github.sha }}-package
           path: "*.tgz"
 
   semantic-release:
@@ -72,8 +72,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      - name: Install dependencies
-        run: yarn --prefer-offline
       - name: Install semantic-release extra plugins
         run: yarn add --dev @semantic-release/changelog @semantic-release/git
       - name: Get dist

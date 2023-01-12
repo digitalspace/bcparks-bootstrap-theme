@@ -13,8 +13,7 @@
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --mode=development --watch",
-    "prepare": "husky install"
+    "watch": "webpack --mode=development --watch"
   },
   "repository": {
     "type": "git",
@@ -43,7 +42,6 @@
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.3.0",
     "file-loader": "^6.2.0",
-    "husky": "^8.0.0",
     "mini-css-extract-plugin": "^2.4.1",
     "node-sass": "^7.0.3",
     "postcss": "^8.3.9",

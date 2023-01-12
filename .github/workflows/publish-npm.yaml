@@ -17,19 +17,22 @@ jobs:
       contents: read
       packages: write
     steps:
-      # Update Release
-      - name: Create Pre-release
+      # Create GH Release
+      - name: Create Release
         uses: "actions/github-script@v6"
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
             try {
-              await github.rest.repos.updateRelease({
+              await github.rest.repos.createRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                release_id: process.env.RELEASE_TAG,
+                tag_name: process.env.RELEASE_TAG,
+                name: process.env.RELEASE_TAG,
+                draft: false,
                 prerelease: false,
-                make_lateststring: true
+                generate_release_notes: true,
+                make_latest: "true"
               });
             } catch (error) {
               core.setFailed(error.message);

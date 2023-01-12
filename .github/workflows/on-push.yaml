@@ -1,11 +1,11 @@
-name: Bump Version, Create Pre-Release, Archive
+name: Bump Version, Create Tag, and Archive
 
 on:
   push:
     branches: [master]
 
 jobs:
-  semantics-release:
+  run:
     name: "Bump version, create pre-release and archive"
     runs-on: ubuntu-latest
     strategy:
@@ -57,23 +57,3 @@ jobs:
         with:
           name: ${{ env.RELEASE_TAG }}-dist
           path: dist/
-
-      # Create GH Pre-release
-      - name: Create Pre-release
-        uses: "actions/github-script@v6"
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-          script: |
-            try {
-              await github.rest.repos.createRelease({
-                draft: false,
-                generate_release_notes: true,
-                name: process.env.RELEASE_TAG,
-                owner: context.repo.owner,
-                prerelease: true,
-                repo: context.repo.repo,
-                tag_name: process.env.RELEASE_TAG,
-              });
-            } catch (error) {
-              core.setFailed(error.message);
-            }

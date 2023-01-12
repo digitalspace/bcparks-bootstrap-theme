@@ -11,6 +11,7 @@ module.exports = {
       },
     ],
     "@semantic-release/git",
+    "@semantic-release/github",
     // "@semantic-release/release-notes-generator",
     // [
     //   "@semantic-release/changelog",

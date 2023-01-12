@@ -1,3 +1,21 @@
+## [1.2.7](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.6...v1.2.7) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** added github plugin ([2d967e3](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/2d967e3ab86f097ed32bf877b3cb17aba9403b10))
+* **workflows:** adding dev deps ([4510945](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/45109450ad2986a3e97e996dbb78c4194f6e1273))
+* **workflows:** changing cache method ([b3673cd](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/b3673cdb1a7bbd60ae3a58df82b8129fec1e0f68))
+* **workflows:** changing yarn install flags ([700ecc3](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/700ecc3f8af024d574e2bf1b576fc964c70be410))
+* **workflows:** fix ([cf4c6dc](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/cf4c6dc12884e0b5959bece73dcd8c8e6169bf7c))
+* **workflows:** fixing yaml ([caf4b98](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/caf4b98404c9bcf09bce67395a51b06907f11540))
+* **workflows:** removing prod flag ([543df83](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/543df83e7791854a4011e755f0c941ba9aca1f66))
+* **workflows:** revert ([2a4fbdc](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/2a4fbdc20fe1ea48ddd960896612e1514c66653e))
+* **workflows:** temp remove release ([aa3d02a](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/aa3d02a482a876cd31e2a69c2e7fde1f22383d1a))
+* **workflows:** test ([e7535e6](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/e7535e6f3b9c14b22d5eaca5b2a1c487d6545876))
+* **workflows:** updating release config ([b9d7851](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/b9d785155de3f91562e4bd2c15780f5dd89465cf))
+* **workflows:** updating upload-artifact ([6c25c4e](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/6c25c4eeb480fdd36b212630b089186f58848dba))
+
 ## [1.2.6](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.5...v1.2.6) (2023-01-12)
 
 

@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.7...v1.2.8) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** get latest tag ([5275b5e](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/5275b5e21e44e03ca85c32fe17bb65e3655a8a97))
+
 ## [1.2.7](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.6...v1.2.7) (2023-01-12)
 
 

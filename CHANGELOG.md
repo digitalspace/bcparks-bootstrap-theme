@@ -1,3 +1,10 @@
+## [1.2.19](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.18...v1.2.19) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** updating env ref ([1c047dc](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/1c047dc14366a35e4a2acae29ee217e8d1e702c5))
+
 ## [1.2.18](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.17...v1.2.18) (2023-01-12)
 
 

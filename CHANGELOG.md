@@ -1,3 +1,11 @@
+## [1.2.11](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.10...v1.2.11) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** cleanup ([d9beb92](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/d9beb92829ceef4a49061c5fab34b289102bdfa4))
+* **workflows:** fixing reference to env var ([935e3c6](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/935e3c6799860fb8b0d54daa0b4911ef2f78e188))
+
 ## [1.2.10](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.9...v1.2.10) (2023-01-12)
 
 

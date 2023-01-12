@@ -20,7 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --prefer-offline --frozen-lockfile
       - name: Build
         run: yarn build
       - uses: actions/upload-artifact@v3
@@ -72,6 +72,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
+      - name: Install semantic-release extra plugins
+        run: yarn add --dev @semantic-release/changelog @semantic-release/git
       - name: Get dist
         uses: actions/download-artifact@v3
         with:

@@ -10,8 +10,7 @@ module.exports = {
         npmPublish: false,
       },
     ],
-    "@semantic-release/git",
-    "@semantic-release/github",
+    "@semantic-release/git"
     // "@semantic-release/release-notes-generator",
     // [
     //   "@semantic-release/changelog",

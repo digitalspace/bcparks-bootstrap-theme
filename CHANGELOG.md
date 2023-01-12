@@ -1,3 +1,10 @@
+## [1.2.10](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.9...v1.2.10) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** bumping version ([b857b6c](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/b857b6cadabb15dd17d3d035cdc4dbb79ed54419))
+
 ## [1.2.9](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.8...v1.2.9) (2023-01-12)
 
 

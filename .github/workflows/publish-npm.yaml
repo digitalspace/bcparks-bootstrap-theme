@@ -4,7 +4,7 @@ run-name: Publishing ${{ github.event.inputs.releaseTag }} to prod
 
 on:
   release:
-    types: [published]
+    types: [edited]
 
 jobs:
   publish:

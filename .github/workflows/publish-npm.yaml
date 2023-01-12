@@ -3,18 +3,38 @@ name: Publishing NPM
 run-name: Publishing ${{ github.event.inputs.releaseTag }} to prod
 
 on:
-  release:
-    types: [edited]
+  workflow_dispatch:
+    inputs:
+      releaseTag:
+        description: "Tag of version to be published to NPM"
+        required: true
 
 jobs:
   publish:
-    if: github.event_name == 'release' && github.event.action == 'published'
     name: "Publish to GitHub Packages and NPM"
     runs-on: ubuntu-20.04
     permissions:
       contents: read
       packages: write
     steps:
+      # Update Release
+      - name: Create Pre-release
+        uses: "actions/github-script@v6"
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          script: |
+            try {
+              await github.rest.repos.updateRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: ${{ env.RELEASE_TAG }}
+                prerelease: false,
+                make_lateststring: true
+              });
+            } catch (error) {
+              core.setFailed(error.message);
+            }
+
       - name: Get package
         uses: actions/download-artifact@v3
         with:

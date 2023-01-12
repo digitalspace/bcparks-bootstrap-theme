@@ -1,3 +1,12 @@
+## [1.2.4](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.3...v1.2.4) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** added extra semantic-release plugins ([8363861](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/836386186973aa002f2d41bcb1085282148249d0))
+* **workflows:** removing husky ([23f7122](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/23f7122ac18815b914401384be6f17edbfa269ad))
+* **workflows:** removing unused packages ([708d0bf](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/708d0bfc6f5a10c57875c0ea22d377cebfebe213))
+
 ## [1.2.3](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.2...v1.2.3) (2023-01-11)
 
 

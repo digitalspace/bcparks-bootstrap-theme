@@ -72,12 +72,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      - name: Install semantic-release extra plugins
-        run: yarn add --dev @semantic-release/changelog @semantic-release/git
       - name: Get dist
         uses: actions/download-artifact@v3
         with:
-          name: dist
+          name: ${{ github.sha }}-dist
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

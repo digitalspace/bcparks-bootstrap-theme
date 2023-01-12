@@ -1,4 +1,4 @@
-name: Publishing NPM
+name: Publish to NPM
 
 run-name: Publishing ${{ github.event.inputs.releaseTag }}
 
@@ -23,12 +23,13 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
+            const { RELEASE_TAG } = process.env
             try {
               await github.rest.repos.createRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                tag_name: process.env.RELEASE_TAG,
-                name: process.env.RELEASE_TAG,
+                tag_name: RELEASE_TAG,
+                name: RELEASE_TAG,
                 draft: false,
                 prerelease: false,
                 generate_release_notes: true,
@@ -37,11 +38,13 @@ jobs:
             } catch (error) {
               core.setFailed(error.message);
             }
+        env:
+          RELEASE_TAG: ${{ github.event.inputs.releaseTag }}
 
       - name: Get package
         uses: actions/download-artifact@v3
         with:
-          name: ${{ env.RELEASE_TAG }}-package
+          name: ${{ github.event.inputs.releaseTag }}-package
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

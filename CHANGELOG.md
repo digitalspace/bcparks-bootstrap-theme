@@ -1,3 +1,10 @@
+## [1.2.23](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.22...v1.2.23) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** adding env var ([2c0083f](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/2c0083f5feb00ce39942fa2ad24adce80057589b))
+
 ## [1.2.22](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.21...v1.2.22) (2023-01-12)
 
 

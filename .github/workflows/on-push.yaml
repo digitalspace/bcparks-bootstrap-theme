@@ -82,7 +82,9 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --silent --frozen-lockfile
+      - name: Install semantic-release extra plugins
+        run: yarn add --dev @semantic-release/changelog @semantic-release/git
       - name: Get dist
         uses: actions/download-artifact@v3
         with:

@@ -72,8 +72,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      - name: Install semantic-release extra plugins
-        run: yarn add --dev @semantic-release/changelog @semantic-release/git
       - name: Get dist
         uses: actions/download-artifact@v3
         with:
@@ -84,7 +82,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
       - name: Get tag
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_ENV
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

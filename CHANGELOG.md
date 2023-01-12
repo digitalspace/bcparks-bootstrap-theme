@@ -1,3 +1,10 @@
+## [1.2.18](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.17...v1.2.18) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** changed ref to env var ([37eda1b](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/37eda1b60d9054da1fa9cd1712684ef8cde9d39a))
+
 ## [1.2.17](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.16...v1.2.17) (2023-01-12)
 
 

@@ -1,3 +1,10 @@
+## [1.2.21](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.20...v1.2.21) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** updates ([eabac36](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/eabac36fbaa74c97889bfd7e160343d75e0d48a4))
+
 ## [1.2.20](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.19...v1.2.20) (2023-01-12)
 
 

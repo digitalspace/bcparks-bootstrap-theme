@@ -27,7 +27,7 @@ jobs:
               await github.rest.repos.updateRelease({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                release_id: env.RELEASE_TAG,
+                release_id: process.env.RELEASE_TAG,
                 prerelease: false,
                 make_lateststring: true
               });

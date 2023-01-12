@@ -20,7 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
       - name: Install dependencies
-        run: yarn --prefer-offline --frozen-lockfile
+        run: yarn --frozen-lockfile
       - name: Build
         run: yarn build
       - uses: actions/upload-artifact@v3
@@ -73,7 +73,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
       - name: Install dependencies
-        run: yarn --prefer-offline --frozen-lockfile
+        run: yarn --frozen-lockfile
       - name: Get dist
         uses: actions/download-artifact@v3
         with:

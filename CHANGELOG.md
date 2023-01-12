@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.8...v1.2.9) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** removing depcrecated package ([2fc3fd1](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/2fc3fd1afbad093c0d2a9ff230bb801b8b2dae80))
+
 ## [1.2.8](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.7...v1.2.8) (2023-01-12)
 
 

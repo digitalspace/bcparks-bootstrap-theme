@@ -1,3 +1,12 @@
+## [1.2.6](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.5...v1.2.6) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** added install to semantic-release step ([fd0b793](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/fd0b793e647686ccce8b41e973a14fc8da5dcad2))
+* **workflows:** fixing tag reference ([3d2c598](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/3d2c59842d282566b8cceefddf9b7a476622b184))
+* **workflows:** removing prefer-offline ([44d265d](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/44d265d14bfe653ee267a50fd124310bd921a4ff))
+
 ## [1.2.5](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.4...v1.2.5) (2023-01-12)
 
 

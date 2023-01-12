@@ -48,14 +48,14 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ process.env.RELEASE_TAG }}-package
+          name: ${{ env.RELEASE_TAG }}-package
           path: "*.tgz"
 
       # Upload Dist
       - name: Upload Dist
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ process.env.RELEASE_TAG }}-dist
+          name: ${{ env.RELEASE_TAG }}-dist
           path: dist/
 
       # Create GH Pre-release

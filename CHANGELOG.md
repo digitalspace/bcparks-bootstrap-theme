@@ -1,3 +1,10 @@
+## [1.2.15](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.14...v1.2.15) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** updated trigger to edited ([493c440](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/493c440757d6df2cd8090cb32d6fd7cb1b51d284))
+
 ## [1.2.14](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.13...v1.2.14) (2023-01-12)
 
 

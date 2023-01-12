@@ -1,3 +1,10 @@
+## [1.2.12](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.11...v1.2.12) (2023-01-12)
+
+
+### Bug Fixes
+
+* **cleanup:** removing .tgz ([c0fd58a](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/c0fd58a9741c73c9e4347a8801ac2016e39350e9))
+
 ## [1.2.11](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.10...v1.2.11) (2023-01-12)
 
 

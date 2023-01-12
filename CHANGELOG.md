@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.4...v1.2.5) (2023-01-12)
+
+
+### Bug Fixes
+
+* **workflows:** create release from tag ([fdbd0fd](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/fdbd0fd4b0ad99a726ad90d48673fa77648c905f))
+
 ## [1.2.4](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.3...v1.2.4) (2023-01-12)
 
 

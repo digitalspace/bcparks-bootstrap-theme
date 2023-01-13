@@ -1,3 +1,10 @@
+## [1.2.29](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.28...v1.2.29) (2023-01-13)
+
+
+### Bug Fixes
+
+* **workflows:** cleanup ([14c2f8a](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/14c2f8a99f0c78d82d63a34684f441ed2f62e5bc))
+
 ## [1.2.28](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.27...v1.2.28) (2023-01-13)
 
 

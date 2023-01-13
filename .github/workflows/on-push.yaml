@@ -43,6 +43,7 @@ jobs:
         id: get-tag
         run: echo "RELEASE_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_ENV
 
+      # TODO: To be used for pages
       # # Yarn pack and upload .tgz
       # - run: yarn pack
       # - name: Cache tgz

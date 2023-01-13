@@ -92,7 +92,6 @@ jobs:
         with:
           path: "**/dist"
           key: ${{ github.event.inputs.releaseTag }}-dist
-      # - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

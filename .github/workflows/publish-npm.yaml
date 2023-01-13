@@ -11,6 +11,7 @@ on:
 
 jobs:
   create-release:
+    name: "Create GH Release"
     runs-on: ubuntu-latest
     steps:
       - name: Set env var
@@ -58,6 +59,11 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --silent --frozen-lockfile
+      - name: Cache Dist
+        uses: actions/cache@v3
+        with:
+          path: ~/dist/
+          key: ${{ env.RELEASE_TAG }}-dist
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -81,6 +87,11 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --silent --frozen-lockfile
+      - name: Cache Dist
+        uses: actions/cache@v3
+        with:
+          path: ~/dist/
+          key: ${{ env.RELEASE_TAG }}-dist
       # - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
       - run: yarn publish --access public
         env:

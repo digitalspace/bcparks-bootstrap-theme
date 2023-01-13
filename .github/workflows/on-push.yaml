@@ -51,9 +51,9 @@ jobs:
       #     path: ~/*.tgz
       #     key: ${{ env.RELEASE_TAG }}-package
 
-      # # Upload Dist
-      # - name: Cache Dist
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ~/dist/
-      #     key: ${{ env.RELEASE_TAG }}-dist
+      # Upload Dist
+      - name: Cache Dist
+        uses: actions/cache@v3
+        with:
+          path: ~/dist/
+          key: ${{ env.RELEASE_TAG }}-dist

@@ -1,3 +1,10 @@
+## [1.2.24](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.23...v1.2.24) (2023-01-13)
+
+
+### Bug Fixes
+
+* **workflows:** removing perms ([577cdd0](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/577cdd0b3a31e78bbf75af83414b5f50173ccf48))
+
 ## [1.2.23](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.22...v1.2.23) (2023-01-12)
 
 

@@ -1,3 +1,10 @@
+## [1.2.26](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.25...v1.2.26) (2023-01-13)
+
+
+### Bug Fixes
+
+* **workflows:** added dist cache ([3201001](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/3201001a9730597051e4c551a64b793414cce644))
+
 ## [1.2.25](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.24...v1.2.25) (2023-01-13)
 
 

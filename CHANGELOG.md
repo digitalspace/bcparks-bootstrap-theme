@@ -1,3 +1,10 @@
+## [1.2.28](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.27...v1.2.28) (2023-01-13)
+
+
+### Bug Fixes
+
+* **workflows:** fixing cache path ([59d7212](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/59d72128a6ffd8be4a3a85974e97a8960262ee4f))
+
 ## [1.2.27](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.26...v1.2.27) (2023-01-13)
 
 

@@ -10,9 +10,8 @@ on:
         required: true
 
 jobs:
-  publish:
-    name: "Publish to GitHub Packages and NPM"
-    runs-on: ubuntu-20.04
+  create-release:
+    runs-on: ubuntu-latest
     steps:
       - name: Set env var
         run: echo "RELEASE_TAG=$EVENT" >> $GITHUB_ENV
@@ -40,19 +39,50 @@ jobs:
               core.setFailed(error.message);
             }
 
-      - name: Get package
-        uses: actions/download-artifact@v3
-        with:
-          name: ${{ github.event.inputs.releaseTag }}-package
-      - run: yarn publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  publish-npm:
+    name: "Publish to NPM"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18]
+    steps:
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: https://npm.pkg.github.com/
+          registry-url: 'https://registry.npmjs.org'
           scope: "@digitalspace"
-      - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
-      - run: yarn publish $(ls *.tgz)
+      - uses: actions/cache@v3
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install dependencies
+        run: yarn install --silent --frozen-lockfile
+      - run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-git:
+    name: "Publish to GitHub Packages"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: "@digitalspace"
+      - uses: actions/cache@v3
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install dependencies
+        run: yarn install --silent --frozen-lockfile
+      # - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
+      - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+

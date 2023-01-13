@@ -1,4 +1,4 @@
-name: Bump Version, Create Tag, and Archive
+name: Bump Version, Create Tag, and Cache
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   run:
-    name: "Bump version, create pre-release and archive"
+    name: "Bump version, create pre-release and cache"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -43,17 +43,17 @@ jobs:
         id: get-tag
         run: echo "RELEASE_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_ENV
 
-      # Yarn pack and upload .tgz
-      - run: yarn pack
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ env.RELEASE_TAG }}-package
-          path: "*.tgz"
+      # # Yarn pack and upload .tgz
+      # - run: yarn pack
+      # - name: Cache tgz
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/*.tgz
+      #     key: ${{ env.RELEASE_TAG }}-package
 
-      # Upload Dist
-      - name: Upload Dist
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ env.RELEASE_TAG }}-dist
-          path: dist/
+      # # Upload Dist
+      # - name: Cache Dist
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/dist/
+      #     key: ${{ env.RELEASE_TAG }}-dist

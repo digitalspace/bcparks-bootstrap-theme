@@ -13,9 +13,6 @@ jobs:
   publish:
     name: "Publish to GitHub Packages and NPM"
     runs-on: ubuntu-20.04
-    permissions:
-      contents: read
-      packages: write
     steps:
       - name: Set env var
         run: echo "RELEASE_TAG=$EVENT" >> $GITHUB_ENV

@@ -1,3 +1,10 @@
+## [1.2.25](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.24...v1.2.25) (2023-01-13)
+
+
+### Bug Fixes
+
+* **workflows:** publishing logic ([6348f82](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/6348f82238de67215ad171fc0b2ff6a694b357b7))
+
 ## [1.2.24](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.23...v1.2.24) (2023-01-13)
 
 

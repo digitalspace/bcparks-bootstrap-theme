@@ -63,7 +63,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/dist/
-          key: ${{ env.RELEASE_TAG }}-dist
+          key: ${{ github.event.inputs.releaseTag }}-dist
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -91,7 +91,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/dist/
-          key: ${{ env.RELEASE_TAG }}-dist
+          key: ${{ github.event.inputs.releaseTag }}-dist
       # - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
       - run: yarn publish --access public
         env:

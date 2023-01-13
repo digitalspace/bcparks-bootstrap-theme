@@ -1,3 +1,10 @@
+## [1.2.27](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.26...v1.2.27) (2023-01-13)
+
+
+### Bug Fixes
+
+* **workflows:** fixing var ref ([6624336](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/6624336172c003f7d177712786081199133a7166))
+
 ## [1.2.26](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.25...v1.2.26) (2023-01-13)
 
 

@@ -55,5 +55,5 @@ jobs:
       - name: Cache Dist
         uses: actions/cache@v3
         with:
-          path: ~/dist/
+          path: "**/dist"
           key: ${{ env.RELEASE_TAG }}-dist

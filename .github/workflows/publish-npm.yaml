@@ -62,7 +62,7 @@ jobs:
       - name: Cache Dist
         uses: actions/cache@v3
         with:
-          path: ~/dist/
+          path: "**/dist"
           key: ${{ github.event.inputs.releaseTag }}-dist
       - run: yarn publish --access public
         env:
@@ -90,7 +90,7 @@ jobs:
       - name: Cache Dist
         uses: actions/cache@v3
         with:
-          path: ~/dist/
+          path: "**/dist"
           key: ${{ github.event.inputs.releaseTag }}-dist
       # - run: echo "registry=https://npm.pkg.github.com/@digitalspace" >> .npmrc
       - run: yarn publish --access public

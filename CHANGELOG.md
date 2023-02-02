@@ -1,3 +1,10 @@
+## [1.2.32](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.31...v1.2.32) (2023-02-02)
+
+
+### Bug Fixes
+
+* **workflows:** adding perms to publish-pages ([e9fb907](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/e9fb90723a6446fa74d34003074f3191be13fb72))
+
 ## [1.2.31](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.30...v1.2.31) (2023-02-02)
 
 

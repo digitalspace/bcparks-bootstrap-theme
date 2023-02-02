@@ -98,6 +98,9 @@ jobs:
 
   publish-pages:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     strategy:
       matrix:
         node-version: [18]

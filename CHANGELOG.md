@@ -1,3 +1,10 @@
+## [1.2.30](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.29...v1.2.30) (2023-02-02)
+
+
+### Bug Fixes
+
+* **workflows:** Adding github pages trigger ([bbd2faa](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/bbd2faa260d6993b4528653194d7c955074c25b7))
+
 ## [1.2.29](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.28...v1.2.29) (2023-01-13)
 
 

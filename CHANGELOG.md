@@ -1,3 +1,10 @@
+## [1.2.31](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.30...v1.2.31) (2023-02-02)
+
+
+### Bug Fixes
+
+* **workflows:** adding checkout ([0c76928](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/0c76928a2f62b4a734f4f4e1c0db59966463e2ca))
+
 ## [1.2.30](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.29...v1.2.30) (2023-02-02)
 
 

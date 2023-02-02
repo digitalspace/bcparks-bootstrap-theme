@@ -34,7 +34,7 @@ our issues and/or raise an issue before doing the pull request.
 You'll need the following tools installed on your device to begin working on the theme:
 
 - The Git client and a GitHub account
-- [NodeJS 14.x](https://nodejs.org/en/) or greater with NPM 3 or greater to build
+- [NodeJS 18.x](https://nodejs.org/en/) or greater with NPM 3 or greater to build
 
 ### First Install
 

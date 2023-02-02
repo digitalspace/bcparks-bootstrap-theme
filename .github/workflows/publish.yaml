@@ -1,4 +1,4 @@
-name: Publish to NPM
+name: Publish to NPM and GH Pages
 
 run-name: Publishing ${{ github.event.inputs.releaseTag }}
 
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       releaseTag:
-        description: "Tag of version to be published to NPM"
+        description: "Tag of version to be published to NPM and GH Pages"
         required: true
 
 jobs:
@@ -96,3 +96,24 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
+  publish-pages:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18]
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+    steps:
+      - name: Cache Dist
+        uses: actions/cache@v3
+        with:
+          path: "**/dist"
+          key: ${{ github.event.inputs.releaseTag }}-dist
+      - run: yarn pack --filename github-pages.tgz
+      - uses: actions/configure-pages@v1
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@main

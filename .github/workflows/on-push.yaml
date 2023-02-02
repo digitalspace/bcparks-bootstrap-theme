@@ -6,7 +6,7 @@ on:
 
 jobs:
   run:
-    name: "Bump version, create pre-release and cache"
+    name: "Bump version, create tag, and cache"
     runs-on: ubuntu-latest
     strategy:
       matrix:

@@ -1,3 +1,10 @@
+## [1.2.33](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.32...v1.2.33) (2023-02-02)
+
+
+### Bug Fixes
+
+* **workflows:** bump version of configure-pages. ([aae78a6](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/aae78a60352c561cf23e01585695e0872deeaef0))
+
 ## [1.2.32](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.31...v1.2.32) (2023-02-02)
 
 

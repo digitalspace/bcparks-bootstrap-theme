@@ -1,3 +1,10 @@
+## [1.2.34](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.33...v1.2.34) (2023-05-15)
+
+
+### Bug Fixes
+
+* **colours:** updating danger colour to comply with accessibility standards ([ce3fef0](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/ce3fef02b89b0e01b5906cced7132f8fc925bb36))
+
 ## [1.2.33](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.32...v1.2.33) (2023-02-02)
 
 

@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.34...v1.3.0) (2023-05-16)
+
+
+### Features
+
+* **bootstrap:** Upping version of Bootstrap to v5.2.3 ([197b3bc](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/197b3bc729def11faddd0fff68acbba0f376144b))
+
 ## [1.2.34](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.33...v1.2.34) (2023-05-15)
 
 

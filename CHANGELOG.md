@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.0...v1.3.1) (2023-08-11)
+
+
+### Bug Fixes
+
+* **release:** Updating popper ([13c2c98](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/13c2c98c563b323ef40041a837f39f902fecb18e))
+
 # [1.3.0](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.2.34...v1.3.0) (2023-05-16)
 
 

@@ -14,11 +14,11 @@ $theme-colors: (
   danger: #d8292f,
   light: #e9ecef,
 );
-
 $custom-colors: (
   primary-nav: #036,
   secondary-nav: #5475a7,
   bcgold: #fcba19,
+  form-grey: #f2f2f2,
 );
 
 $primary: #38598a;
@@ -31,6 +31,7 @@ $light: #e9ecef;
 $primary-nav: #036;
 $secondary-nav: #5475a7;
 $bcgold: #fcba19;
+$form-grey: #f2f2f2;
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
@@ -95,4 +96,5 @@ $pagination-hover-border-color: $control-link-border-color !default;
 $list-group-active-bg: $control-link-bg !default;
 $list-group-active-border-color: $control-link-border-color !default;
 $list-group-action-hover-color: $link-hover-color;
-$nav-tabs-link-hover-border-color: $control-link-color $control-link-color $nav-tabs-border-color !default;
+$nav-tabs-link-hover-border-color: $control-link-color $control-link-color
+  $nav-tabs-border-color !default;

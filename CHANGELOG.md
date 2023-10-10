@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.1...v1.3.2) (2023-10-10)
+
+
+### Bug Fixes
+
+* **release:** updating info colour ([04a994f](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/04a994fc375a6517aede4d264693fa60952f22a8))
+
 ## [1.3.1](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.0...v1.3.1) (2023-08-11)
 
 

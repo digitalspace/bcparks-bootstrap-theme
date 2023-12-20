@@ -27,7 +27,7 @@
   "homepage": "https://github.com/digitalspace/bcparks-bootstrap-theme#readme",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.1",
+    "bootstrap": "^5.3.2",
     "jquery": "^3.6.0"
   },
   "devDependencies": {

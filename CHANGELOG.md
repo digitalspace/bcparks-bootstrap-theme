@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.4...v1.3.5) (2024-01-23)
+
+
+### Bug Fixes
+
+* **release:** Fixing tooltips. ([d905cae](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/d905cae46178bc0188f867bb49576bdc32c5eb1f))
+
 ## [1.3.2](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.1...v1.3.2) (2023-10-10)
 
 

@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.5...v1.3.6) (2024-01-23)
+
+
+### Bug Fixes
+
+* **actions:** Update publish.yaml ([af4bdd8](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/af4bdd82e13aa0a0343897f2f51c3208172bd287))
+
 ## [1.3.5](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.4...v1.3.5) (2024-01-23)
 
 

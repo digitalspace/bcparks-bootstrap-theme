@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.0...v1.4.1) (2024-06-13)
+
+
+### Bug Fixes
+
+* **bump:** forcing build. ([635dfdb](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/635dfdbec09fb8e09f5b037e969873a4701ff906))
+
 # [1.4.0](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.6...v1.4.0) (2024-06-13)
 
 

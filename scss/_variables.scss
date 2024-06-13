@@ -5,96 +5,74 @@
 // Reference: http://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/developers-guide/css-elements
 
 // Change theme-colors
+$blue: #005C98;
+$primary: #013366;
+$secondary: #3470B1;
+$success: #42814A;
+$danger: #CE3E39;
+$warning: #F8BB47;
+$info: #D8EAFD;
+$dark: #252423;
+$light: #FFFFFF;
+
+$secondary-nav: #3470B1;
+$bcgold: #F8BA47;
+$form-grey: #FAF9F8;
+
+$gray-100: #FAF9F8;
+$gray-200: #F3F2F1;
+$gray-300: #ECEAE8;
+$gray-400: #E0DEDC;
+$gray-500: #D1CFCD;
+$gray-600: #C6C5C3;
+$gray-700: #9F9D9C;
+$gray-800: #605E5C;
+$gray-900: #3D3C3B;
+$purple: #5F3B93;
+$green: #63A64A;
+$teal: #3AB99B;
+$cyan: #40B9D8;
+$pink: #F1858B;
+$red: #DB595A;
+$orange: #F2A488;
+$yellow: #EBC436;
+
+$border-color: #D8D8D8;
+$custom-control-indicator-checked-disabled-bg: #EDEBE9;
+$btn-link-disabled-color: #9F9D9C;
+$input-disabled-bg: $gray-300;
+$input-border-color: #D8D8D8;
+$input-placeholder-color: $gray-700;
+
+//font and text
+$link-color: #255A90;
+$text-muted: #474543;
+$blockquote-small-color: #474543;
+$input-color: #2D2D2D;
+$body-color: #2D2D2D;
+$nav-tabs-link-active-color: #2D2D2D;
+$nav-link-disabled-color: #9F9D9C;
+$breadcrumb-active-color: $secondary;
+$custom-control-label-disabled-color: #9F9D9C;
+$font-family-sans-serif: BCSans, "Noto Sans", Verdana, Arial, sans serif;
+
 $theme-colors: (
-  primary: #38598a,
-  secondary: #6c757d,
-  success: #43893e,
-  info: #a6c9ea,
-  warning: #f9ca54,
-  danger: #d8292f,
-  light: #e9ecef,
+  blue: $blue,
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  danger: $danger,
+  warning: $warning,
+  info: $info,
+  dark: $dark,
+  light: $light,
 );
 $custom-colors: (
-  primary-nav: #036,
-  secondary-nav: #5475a7,
-  bcgold: #fcba19,
-  form-grey: #f2f2f2,
+  primary-nav: $primary,
+  secondary-nav: $secondary,
+  bcgold: $bcgold,
+  form-grey: $form-grey,
 );
 
-$primary: #38598a;
-$secondary: #6c757d;
-$success: #43893e;
-$info: #a6c9ea;
-$warning: #f9ca54;
-$danger: #d8292f;
-$light: #e9ecef;
-$primary-nav: #036;
-$secondary-nav: #5475a7;
-$bcgold: #fcba19;
-$form-grey: #f2f2f2;
-
 $theme-colors: map-merge($theme-colors, $custom-colors);
-
-// Add our font as default
 $bcgov-font-path: "../fonts" !default;
-$font-family-sans-serif: BCSans, "Noto Sans", Verdana, Arial, sans serif !default;
-$font-family-base: $font-family-sans-serif !default;
-$line-height-base: 1.6 !default;
-$body-color: #494949 !default;
-
-// Headings
-$headings-font-weight: 700 !default;
-$headings-line-height: 1.1 !default;
-$headings-margin-bottom: 1.25rem !default;
-$h1-font-size: 2.074rem !default;
-$h2-font-size: 1.54912rem !default;
-$h3-font-size: 1.33882rem !default;
-$h4-font-size: 1rem !default;
-$h5-font-size: 0.86425rem !default;
-$h6-font-size: 0.80345rem !default;
-
-// Links
-$link-decoration: underline !default;
-$link-color: #1a5a96 !default;
-$link-hover-color: #0631f3 !default;
-$btn-link-outline-color: rgba($primary, 0.5) !default;
-
-// Navbar - header and footer
-$header-box-shadow-color: rgba(51, 51, 51, 0.5) !default;
-$nav-link-padding-x: 0.8rem !default;
-$nav-link-padding-y: 0.4rem !default;
-$navbar-nav-link-padding-x: 0.8rem !default;
-$navbar-nav-link-padding-y: 0.4rem !default;
-$navbar-dark-color: #fff !default;
-$navbar-dark-toggler-border-color: rgba(255, 255, 255, 0.6) !default;
-$footer-separator-color: #4b5e73 !default;
-
-// Darker borders
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-450: #bdc5cc !default;
-$gray-500: #adb5bd !default;
-$alpha-border-color: rgba(black, 0.3) !default;
-$alert-border-level: -7 !default;
-$card-border-color: $alpha-border-color !default;
-$hr-border-color: $alpha-border-color !default;
-$border-color: $gray-400 !default;
-$input-border-color: $gray-500 !default;
-$list-group-border-color: $alpha-border-color !default;
-$nav-tabs-border-color: $gray-500 !default;
-$nav-tabs-link-active-border-color: $gray-500 $gray-500 white !default;
-$pagination-border-color: $gray-500 !default;
-$pagination-disabled-border-color: $gray-400 !default;
-
-// Clearer hover states
-$control-link-color: white !default;
-$control-link-bg: lighten($secondary-nav, 10%) !default; // custom var
-$control-link-border-color: lighten($secondary-nav, 8%) !default; // custom var
-$pagination-hover-color: $control-link-color;
-$pagination-hover-bg: $control-link-bg !default;
-$pagination-hover-border-color: $control-link-border-color !default;
-$list-group-active-bg: $control-link-bg !default;
-$list-group-active-border-color: $control-link-border-color !default;
-$list-group-action-hover-color: $link-hover-color;
-$nav-tabs-link-hover-border-color: $control-link-color $control-link-color
-  $nav-tabs-border-color !default;

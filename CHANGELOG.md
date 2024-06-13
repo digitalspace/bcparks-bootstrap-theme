@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.6...v1.4.0) (2024-06-13)
+
+
+### Features
+
+* **variables:** Updating theme and removing old overrides ([da60d71](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/da60d71bdbd8221534d0dd336d03027baa7c74a5))
+
 ## [1.3.6](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.3.5...v1.3.6) (2024-01-23)
 
 

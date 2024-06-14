@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.3...v1.4.4) (2024-06-14)
+
+
+### Bug Fixes
+
+* **node20:** Updating action to use node 20 ([e5c6b97](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/e5c6b9779fa2db5c2c0a723d12b48603167c22dc))
+
 ## [1.4.3](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.2...v1.4.3) (2024-06-14)
 
 

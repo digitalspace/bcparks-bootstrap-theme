@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.1...v1.4.2) (2024-06-14)
+
+
+### Bug Fixes
+
+* **overrides:** Re-adding overrides and additions ([1393e28](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/1393e281511e8dfa1563050cf1e4bd6549c858f5))
+
 ## [1.4.1](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.0...v1.4.1) (2024-06-13)
 
 

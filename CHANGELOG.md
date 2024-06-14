@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.2...v1.4.3) (2024-06-14)
+
+
+### Bug Fixes
+
+* **cleanup:** upping action versions. Cleaning up variables" ([b14a6c9](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/b14a6c9ea3219ab2177758b96c677f03113fd713))
+
 ## [1.4.2](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.1...v1.4.2) (2024-06-14)
 
 

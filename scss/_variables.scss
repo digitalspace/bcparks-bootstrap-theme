@@ -60,7 +60,7 @@ $yellow: #EBC436;
 
 $border-color: #D8D8D8;
 $custom-control-indicator-checked-disabled-bg: #EDEBE9;
-$btn-link-disabled-color: #9F9D9C;
+$btn-link-disabled-color: $gray-700;
 $input-disabled-bg: $gray-300;
 $input-border-color: #D8D8D8;
 $input-placeholder-color: $gray-700;
@@ -72,9 +72,9 @@ $blockquote-small-color: #474543;
 $input-color: #2D2D2D;
 $body-color: #2D2D2D;
 $nav-tabs-link-active-color: #2D2D2D;
-$nav-link-disabled-color: #9F9D9C;
+$nav-link-disabled-color: $gray-700;
 $breadcrumb-active-color: $secondary;
-$custom-control-label-disabled-color: #9F9D9C;
+$custom-control-label-disabled-color: $gray-700;
 
 // Add our font as default
 $bcgov-font-path: "../fonts" !default;
@@ -82,15 +82,7 @@ $font-family-sans-serif: BCSans, "Noto Sans", Verdana, Arial, sans serif !defaul
 $font-family-base: $font-family-sans-serif !default;
 
 // Headings
-$headings-font-weight: 700 !default;
-$headings-line-height: 1.1 !default;
-$headings-margin-bottom: 1.25rem !default;
-$h1-font-size: 2.074rem !default;
-$h2-font-size: 1.54912rem !default;
-$h3-font-size: 1.33882rem !default;
-$h4-font-size: 1rem !default;
-$h5-font-size: 0.86425rem !default;
-$h6-font-size: 0.80345rem !default;
+$headings-font-weight: bold !default;
 
 // Links
 $link-decoration: underline !default;

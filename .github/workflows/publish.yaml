@@ -21,7 +21,7 @@ jobs:
 
       # Create GH Release
       - name: Create Release
-        uses: "actions/github-script@v6"
+        uses: "actions/github-script@v7"
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
@@ -47,20 +47,20 @@ jobs:
       matrix:
         node-version: [18]
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://registry.npmjs.org'
           scope: "@digitalspace"
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --silent --frozen-lockfile
       - name: Cache Dist
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: "**/dist"
           key: ${{ github.event.inputs.releaseTag }}-dist
@@ -75,20 +75,20 @@ jobs:
       matrix:
         node-version: [18]
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://npm.pkg.github.com'
           scope: "@digitalspace"
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --silent --frozen-lockfile
       - name: Cache Dist
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: "**/dist"
           key: ${{ github.event.inputs.releaseTag }}-dist
@@ -108,14 +108,14 @@ jobs:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Cache Dist
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: "**/dist"
           key: ${{ github.event.inputs.releaseTag }}-dist
       - run: yarn pack --filename github-pages.tgz
-      - uses: actions/configure-pages@v3
+      - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

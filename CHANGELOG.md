@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.4...v1.4.5) (2024-06-28)
+
+
+### Bug Fixes
+
+* **scss:** Updating header font sizes and breadcrumb bg colour ([0047c7e](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/0047c7e73a2d93303e5655b263a9d20e953b3a11))
+
 ## [1.4.4](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.3...v1.4.4) (2024-06-14)
 
 

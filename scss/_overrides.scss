@@ -113,3 +113,36 @@ footer nav {
 
 $component-active-bg: $primary;
 $nav-pills-link-active-color: white;
+
+.breadcrumb {
+    background-color: #FAF9F8;
+}
+
+// https://www2.gov.bc.ca/gov/content/digital/design-system/foundations/design-tokens/glossary
+h1 {
+    font-size: 2.25rem !important;
+}
+
+h2 {
+    font-size: 2rem !important;
+}
+
+h3 {
+    font-size: 1.75rem !important;
+}
+
+h4 {
+    font-size: 1.5rem !important;
+}
+
+h5 {
+    font-size: 1.25rem !important;
+}
+
+h6 {
+    font-size: 1.125rem !important;
+}
+
+label {
+    font-size: 0.75rem !important;
+}

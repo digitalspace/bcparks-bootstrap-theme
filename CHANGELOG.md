@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.5...v1.4.6) (2024-06-28)
+
+
+### Bug Fixes
+
+* **breadcrumb:** Updating breadcrumb colours ([650a80e](https://github.com/digitalspace/bcparks-bootstrap-theme/commit/650a80e6a10ba08393be00ba257665563fc165ba))
+
 ## [1.4.5](https://github.com/digitalspace/bcparks-bootstrap-theme/compare/v1.4.4...v1.4.5) (2024-06-28)
 
 
